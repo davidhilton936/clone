@@ -7,7 +7,6 @@
 """Unit tests for the cursorManager module.
 """
 
-import unittest
 import cursorManager
 from . import TestCase
 from .textProvider import BasicTextProvider
@@ -76,3 +75,9 @@ class TestSelectAll(TestCase):
 
 	def test_selectAllFromStart(self):
 		self._selectAllTest(0) # Caret at "a"
+
+	def test_selectAllFromMiddle(self):
+		self._selectAllTest(1) # Caret at "b"
+
+	def test_selectAllFromEnd(self):
+		self._selectAllTest(2) # Caret at "c"
